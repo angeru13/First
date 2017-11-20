@@ -1,61 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/holo_orange_light">
 
-    <EditText
-        android:id="@+id/first_number"
-        android:layout_above="@+id/second_number"
+    <LinearLayout
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="1234"
-        android:textSize="20dp"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#F96"
+        android:id="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/second_number"
-        android:layout_belowe="@+id/first_number"
+        <EditText
+
+            android:id="@+id/first_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/second_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3333"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="4567"
+            android:textSize="30dp"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_alignParentLeft="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="plus"
+            android:text="@string/plus" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="minus"
+            android:text="@string/minus" />
+</LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3333"
-        android:textSize="20dp"/>
+        android:layout_alignParentRight="true"
+        >
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="4567"
-        android:textSize="30dp"/>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="plus"
-        android:text="@string/plus" />
+            android:onClick="multiples"
+            android:text="*" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="minus"
-        android:text="@string/minus" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="multiples"
-        android:text="*" />
+            android:layout_height="wrap_content"
+            android:onClick="division"
+            android:text="/" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:onClick="division"
-        android:text="/" />
 
-</RelativeLayoutLayout>
+
+</RelativeLayout>
+
